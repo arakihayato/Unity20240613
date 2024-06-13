@@ -7,6 +7,7 @@ public class BlockGame : MonoBehaviour
     //ゲームオブジェクトの追加
     public GameObject blockPrefab;
     //スパン
+    int tmp = 0;
     float span = 0.3f;
     int row =4;
     int col = 7;
