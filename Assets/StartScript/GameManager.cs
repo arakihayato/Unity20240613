@@ -35,4 +35,28 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Result");
     }
     //リスタートメソッド
+    public void ReturnToStart()
+    {
+        SceneManager.LoadScene("Start");
+    }
+
+    public void ResetGame()
+    {
+        SceneData.score = 0;
+        SceneData.totalBlocks = 0;
+        //全てのブロックを削除
+        GameObject[] blocks = GameObject.FindGameObjectWithTag("Blocks");
+
+        foreach (GameObject block in blocks)
+        {
+            Destroy(block);
+        }
+
+        //スコアの初期化
+        if (Scora.instance != null)
+        {
+            Scora.instance.ScoraManager(-Scora.instance.GetCurrentScore());
+        }
+
+    }
 }

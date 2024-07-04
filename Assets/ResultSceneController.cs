@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -10,25 +11,23 @@ public class ResultSceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.scoreTextObject.GetComponent<TextMeshProUGUI>().text = "SCORE:"+SceneData.score;
+        scoreTextObject.GetComponent<TextMeshProUGUI>().text = "SCORE:" + SceneData.score;
 
         //GameOver
         if (SceneData.totalBlocks == 0)
         {
-            this.gameResultObject.GetComponent<TextMeshProUGUI>().text = "GAME CLEAR";
-            this.gameResultObject.GetComponent<TextMeshProUGUI>().color = Color.yellow;
+            gameResultObject.GetComponent<TextMeshProUGUI>().text = "GAME CLEAR";
+            gameResultObject.GetComponent<TextMeshProUGUI>().color = Color.yellow;
         }
         else
         {
-            this.gameResultObject.GetComponent<TextMeshProUGUI>().text = "GAME OVER";
-            this.gameResultObject.GetComponent<TextMeshProUGUI>().color = Color.red;
+            gameResultObject.GetComponent<TextMeshProUGUI>().text = "GAME OVER";
+            gameResultObject.GetComponent<TextMeshProUGUI>().color = Color.red;
         }
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnStartButtonPreseed()
     {
-        
+        GameManager.instance.ReturnToStart();
     }
 }
