@@ -13,7 +13,7 @@ public class Scora : MonoBehaviour
 
     //スコアを表示するためのコンポーネントとトータルスコア
     public GameObject ScoraText;
-    private int totalScore = 0;
+    public int totalScore = 0;
     //プライベートコンストラクタ
     private void Awake()
     {

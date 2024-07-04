@@ -236,6 +236,10 @@ GameObject:
   - component: {fileID: 529344161}
   - component: {fileID: 529344160}
   - component: {fileID: 529344159}
+<<<<<<< HEAD
+  - component: {fileID: 529344162}
+=======
+>>>>>>> f71942f2dcaed14c95ee16e5fb12677a5d72ac00
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -293,6 +297,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+--- !u!114 &529344162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529344158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7af29071a537c1a4dad9e8fdddbe8d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreTextObject: {fileID: 0}
+  gameResultObject: {fileID: 0}
+=======
+>>>>>>> f71942f2dcaed14c95ee16e5fb12677a5d72ac00
 --- !u!1 &1098628916
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +417,10 @@ GameObject:
   - component: {fileID: 1941967362}
   - component: {fileID: 1941967364}
   - component: {fileID: 1941967363}
+<<<<<<< HEAD
+  - component: {fileID: 1941967365}
+=======
+>>>>>>> f71942f2dcaed14c95ee16e5fb12677a5d72ac00
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -442,7 +467,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
+  m_text: '0
+
+'
+=======
   m_text: Result
+>>>>>>> f71942f2dcaed14c95ee16e5fb12677a5d72ac00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -519,6 +550,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941967361}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
+--- !u!114 &1941967365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941967361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7af29071a537c1a4dad9e8fdddbe8d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreTextObject: {fileID: 1941967361}
+  gameResultObject: {fileID: 0}
+=======
+>>>>>>> f71942f2dcaed14c95ee16e5fb12677a5d72ac00
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

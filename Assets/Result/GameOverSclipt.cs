@@ -9,10 +9,19 @@ public class GameOverSclipt : MonoBehaviour
     {
         if (GameManager.instance == null)
         {
-            GameManager.instance = FindAnyObjectByType<GameOverSclipt>();
+            GameManager.instance = FindAnyObjectByType<GameManager>();
         }
-        int blocks = SceneData.totalBlocks;
-        GameManager.instance.EndGame(blocks);
-        Destroy(collision.gameObject);
+        if (GameManager.instance != null)
+        {
+
+            int blocks = SceneData.totalBlocks;
+            GameManager.instance.EndGame(blocks);
+            Destroy(collision.gameObject);
+
+        }
+        else
+        {
+            Debug.Log("ゲームマネージャーがインスタンス化されていません");
+        }
     }
 }
