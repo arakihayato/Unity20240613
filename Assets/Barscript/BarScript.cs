@@ -18,4 +18,14 @@ public class BarScript : MonoBehaviour
         //左右のキーを入力すると速度を変更して移動
         myRigidBody.velocity = new Vector3(Input.GetAxis("Horizontal") * speed, 0f, 0f);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        //ボールが衝突したら効果音を鳴らす
+        if (collision.gameObject.CompareTag("Ball"))
+        {
+            GetComponent<AudioSource>().Play();
+        }
+    }
+
 }

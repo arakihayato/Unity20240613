@@ -19,11 +19,11 @@ public class BlockScript : MonoBehaviour
     {
         if(Scora.instance!=null)
         {
-            Scora.instance.ScoraManager(score);
+            Scora.instance.ScoraManager(this.score);
         }
         else
         {
-            //Debug.LogError("インスタンスがありません。");
+            Debug.LogError("ScoreScript instance is not set.");
         }
         generator.BlocklDestroyed();
 

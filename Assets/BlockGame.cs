@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 using UnityEngine.SceneManagement;
@@ -15,8 +16,12 @@ public class BlockGame : MonoBehaviour
     int BlockScaleY = 1;
     int totalBlocks = 0;
     // Start is called before the first frame update
+
+    public AudioClip sound1;
+    AudioSource audioSource;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         //ブロックのポジション
         int px, py;
         px = -7;
@@ -28,28 +33,23 @@ public class BlockGame : MonoBehaviour
         {
             for(int j=0;j<col;j++)
             {
-                GameObject go = Instantiate(blockPrefab);
-                go.transform.position=new Vector3(px+(j*(span+BlockScaleX)), py +(i * (span + BlockScaleY)), 0);
-
+                GameObject block = Instantiate(blockPrefab);
+                block.transform.position=new Vector3(px+(j*(span+BlockScaleX)), py +(i * (span + BlockScaleY)), 0);
+                block.tag = "Blocks";
             }
         }
 
         Scora.instance.ScoraManager(scoreDefult);
     }
 
-
     public void BlocklDestroyed()
     {
         totalBlocks--;
         SceneData.totalBlocks = totalBlocks;
+        audioSource.PlayOneShot(sound1);
         if (totalBlocks <= 0)
         {
             GameManager.instance.EndGame(totalBlocks);
         }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

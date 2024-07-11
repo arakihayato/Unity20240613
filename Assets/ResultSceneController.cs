@@ -11,18 +11,18 @@ public class ResultSceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreTextObject.GetComponent<TextMeshProUGUI>().text = "SCORE:" + SceneData.score;
+        this.scoreTextObject.GetComponent<TextMeshProUGUI>().text = "SCORE:" + SceneData.score;
 
         //GameOver
         if (SceneData.totalBlocks == 0)
         {
-            gameResultObject.GetComponent<TextMeshProUGUI>().text = "GAME CLEAR";
-            gameResultObject.GetComponent<TextMeshProUGUI>().color = Color.yellow;
+            this.gameResultObject.GetComponent<TextMeshProUGUI>().text = "GAME CLEAR";
+            this.gameResultObject.GetComponent<TextMeshProUGUI>().color = Color.yellow;
         }
         else
         {
-            gameResultObject.GetComponent<TextMeshProUGUI>().text = "GAME OVER";
-            gameResultObject.GetComponent<TextMeshProUGUI>().color = Color.red;
+            this.gameResultObject.GetComponent<TextMeshProUGUI>().text = "GAME OVER";
+            this.gameResultObject.GetComponent<TextMeshProUGUI>().color = Color.red;
         }
     }
 
